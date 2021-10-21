@@ -6,11 +6,37 @@ body {
 }
 
 #content {
+    width: 100%;
+    border: 0px red dashed;
     display: grid;
-    grid-template: 100px 100px / 40px 40px 40px;
+    grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
+    grid-gap: 10px;
+    padding: 0px;
 }
 
-.item {
+#content > div {
+    border: 10px green dashed;
+}
 
-  
+.col1n2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start:3;
+  grid-row-end: 5;
+
+}
+.row1n2 {
+  grid-column-start: :3;
+  grid-column-end: 4;
+  grid-row-start:1;
+  grid-row-end: 3;
+}
+.red {
+  background-color:red;
+}
+.green {
+  background-color:green;
+}
+.violet {
+  background-color:violet;  
 }
