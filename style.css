@@ -7,7 +7,7 @@ body {
 
 #content {
     width: 100%;
-    border: 0px red dashed;
+    border: 0px red solid;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
     grid-gap: 10px;
@@ -15,7 +15,7 @@ body {
 }
 
 #content > div {
-    border: 10px green dashed;
+    border: 20px green groove;
 }
 
 .col1n2 {
@@ -35,11 +35,11 @@ body {
   background-color:red;
 }
 .green {
-  background-color:green;
+  background-color: #90ff30;
 }
 .violet {
   background-color:violet;
 }
 .yellow {
-  background-color:yellow;  
+  background-color:yellow;
 }
