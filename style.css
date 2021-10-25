@@ -9,8 +9,8 @@ body {
 /* ****************************** */
 /* *** flex box
 /* ****************************** */
-#nav {
-  width: 80%;
+#nav-flex {
+  width: 90%;
   height: 30px;
   margin: auto;
   display: flex;
@@ -33,18 +33,18 @@ body {
 /* ****************************** */
 
 .gridHead {
+  width: 90%;
   display: block;
-  width: 80%;
-  text-align:left;
-  margin:  10px auto;
-  border:1px red dashed;
+  text-align: center;
+  margin:  8px auto;
+  border: 1px red dashed;
 }
 
 
 /* ****************************** */
 /* *** grid
 /* ****************************** */
-#content {
+#content-grid {
     width: 80%;
     margin: auto;
     border: 1px red solid;
@@ -54,7 +54,7 @@ body {
     padding: 0px;
 }
 
-#content > div {
+#content-grid > div {
     border: 20px green groove;
 }
 .col1n2 {
