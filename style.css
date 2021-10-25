@@ -28,6 +28,17 @@ body {
   width: 20%;
   text-align: center;
 }
+/* ****************************** */
+/* end flex */
+/* ****************************** */
+
+.gridHead {
+  display: block;
+  width: 80%;
+  text-align:left;
+  margin:  10px auto;
+  border:1px red dashed;
+}
 
 
 /* ****************************** */
@@ -51,10 +62,8 @@ body {
   grid-row: 3 / span 2;
 }
 .row1n2 {
-  grid-column-start: :3;
-  grid-column-end: 4;
-  grid-row-start:1;
-  grid-row-end: 3;
+  grid-column: 3 / span 1;
+  grid-row: 1 / span 2;
 }
 .red {
   background-color:red;
