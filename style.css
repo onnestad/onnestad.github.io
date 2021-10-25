@@ -1,10 +1,10 @@
 body {
-  margin:0;
-  padding:0;
-  font-family: Courier !important; /*, 'Times', serif;*/
+  margin: 0;
+  padding: 0;
+  font-family: Courier !important;
+  /*, 'Times', serif;*/
   font: 12px Times normal;
 }
-
 
 /* ****************************** */
 /* *** flex box
@@ -17,7 +17,8 @@ body {
   background-color: DodgerBlue;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between; /* around; /*flex-start;*/
+  justify-content: space-between;
+  /* around; /*flex-start;*/
   align-items: center;
   border: 1px red dashed;
 }
@@ -29,52 +30,57 @@ body {
   width: 20%;
   text-align: center;
 }
+
 /* ****************************** */
 /* end flex */
 /* ****************************** */
-
 .gridHead {
   width: 90%;
   display: block;
   text-align: center;
-  margin:  8px auto;
+  margin: 8px auto;
   border: 1px red dashed;
 }
 
-
 /* ****************************** */
-/* *** grid
+/* *** content-grid
 /* ****************************** */
 #content-grid {
-    width: 90%;
-    margin: auto;
-    border: 1px red solid;
-    display: grid;
-    grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
-    grid-gap: 4px;
-    padding: 0px;
+  width: 90%;
+  margin: auto;
+  border: 1px red solid;
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
+  grid-gap: 4px;
+  padding: 0px;
 }
 
-#content-grid > div {
-    border: 20px green groove;
+#content-grid>div {
+  border: 20px green groove;
 }
+
 .col1n2 {
   grid-column: 1 / span 2;
   grid-row: 3 / span 2;
 }
+
 .row1n2 {
   grid-column: 3 / span 1;
   grid-row: 1 / span 2;
 }
+
 .red {
-  background-color:red;
+  background-color: red;
 }
+
 .green {
   background-color: #90ff30;
 }
+
 .violet {
-  background-color:violet;
+  background-color: violet;
 }
+
 .yellow {
-  background-color:yellow;
+  background-color: yellow;
 }
