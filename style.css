@@ -1,13 +1,42 @@
 body {
   margin:0;
   padding:0;
-  font-family: 'Times', serif;
+  font-family: Courier !important; /*, 'Times', serif;*/
   font: 12px Times normal;
 }
 
+
+/* ****************************** */
+/* *** flex box
+/* ****************************** */
+#nav {
+  width: 80%;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  background-color: DodgerBlue;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; /* around; /*flex-start;*/
+  align-items: center;
+}
+
+#nav span {
+  display: inline-block;
+  background-color: red;
+  padding: 4px;
+  width: 20%;
+  text-align: center;
+}
+
+
+/* ****************************** */
+/* *** grid
+/* ****************************** */
 #content {
-    width: 100%;
-    border: 0px red solid;
+    width: 80%;
+    margin: auto;
+    border: 1px red solid;
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
     grid-gap: 10px;
@@ -17,13 +46,9 @@ body {
 #content > div {
     border: 20px green groove;
 }
-
 .col1n2 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  grid-row-start:3;
-  grid-row-end: 5;
-
+  grid-column: 1 / span 2;
+  grid-row: 3 / span 2;
 }
 .row1n2 {
   grid-column-start: :3;
