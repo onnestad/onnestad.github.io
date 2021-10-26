@@ -90,6 +90,7 @@ section {
       "main main"
       "main main";
   }
+
   .left {
     display: none;
   }
@@ -101,22 +102,22 @@ section {
 
 .logo {
   grid-area: logo;
-  background-color:red;
+  background-color: red;
 }
 
 .top {
   grid-area: top;
-  background-color:violet;
+  background-color: violet;
 }
 
 .left {
   grid-area: left;
-  background-color:violet;
+  background-color: violet;
 }
 
 .main {
   grid-area: main;
-  background-color:DodgerBlue;
+  background-color: DodgerBlue;
 }
 
 .geometrical0 {
