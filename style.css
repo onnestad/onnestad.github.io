@@ -1,14 +1,14 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Courier !important;
-  /*, 'Times', serif;*/
-  font: 12px Times normal;
+  font-size: 12px;
+  font-family: Arial !important;
 }
 
 section {
   padding: 10px;
-  border: 1px yellow dashed;
+  margin: 10px 0;
+  border: 1px black dashed;
 }
 
 /* ****************************** */
@@ -39,12 +39,13 @@ section {
 /* ****************************** */
 /* end flex */
 /* ****************************** */
-.gridHead {
+.sectionHead {
   width: 90%;
   display: block;
-  text-align: center;
+  text-align: left;
   margin: 8px auto;
   border: 1px red dashed;
+  font-size: 2em;
 }
 
 /* ****************************** */
