@@ -27,7 +27,6 @@ section {
   align-items: center;
   border: 1px red dashed;
 }
-
 .nav-flex span {
   display: inline-block;
   background-color: red;
