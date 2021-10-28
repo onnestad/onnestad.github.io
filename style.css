@@ -16,7 +16,8 @@ section {
 /* ****************************** */
 .nav-flex {
   width: 90%;
-  height: 30px;
+  min-height: 30px;
+  padding:2px;
   margin: auto;
   display: flex;
   background-color: DodgerBlue;
