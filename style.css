@@ -32,6 +32,8 @@ section {
   background-color: red;
   padding: 4px;
   width: 20%;
+  min-width: 60px;
+  margin:2px;
   text-align: center;
 }
 
