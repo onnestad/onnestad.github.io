@@ -64,14 +64,21 @@ section {
   border: 20px green groove;
 }
 
-#gridTempA {
-  width: 90%;
-  margin: auto;
-  border: 1px red solid;
+/* ****************************** */
+/* *** grid template area         */
+/* ****************************** */
+#gridTempA { /* grid template A */
+  width: 90%;   /* taggen skall uppta 90% av skärmbredd */
+  margin: auto; /* auto => taggen centreras på skärmen */
+  border: 1px red solid; /* fär att visa taggens utbredning */
   height: 600px;
-  display: grid;
+  display: grid; /* rutnäts direktivet */
 }
 
+/* Media query - css motsvarighet till if-sats */
+/* snabel a indikerar att det är något alldeles speciellt */
+/* det närmaste vi kommer programmering i css */
+/* om skärmen har minst 700 px bredd så gäller detta */
 @media (min-width: 700px) {
   #gridTempA {
     grid-template-areas:
@@ -82,6 +89,7 @@ section {
   }
 }
 
+/* om skärmen har högst 700 px bredd så gäller detta */
 @media (max-width: 700px) {
   #gridTempA {
     grid-template-areas:
