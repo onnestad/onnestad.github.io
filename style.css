@@ -14,7 +14,7 @@ section {
 /* ****************************** */
 /* *** flex box
 /* ****************************** */
-#nav-flex {
+.nav-flex {
   width: 90%;
   height: 30px;
   margin: auto;
@@ -28,7 +28,7 @@ section {
   border: 1px red dashed;
 }
 
-#nav-flex span {
+.nav-flex span {
   display: inline-block;
   background-color: red;
   padding: 4px;
