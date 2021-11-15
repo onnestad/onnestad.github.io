@@ -50,31 +50,14 @@ section, footer {
 }
 
 /* ****************************** */
-/* *** content-grid
-/* ****************************** */
-#content-grid {
-  width: 90%;
-  margin: auto;
-  border: 1px red solid;
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/ 1fr 50% 2fr;
-  grid-gap: 4px;
-  padding: 0px;
-}
-
-#content-grid>div {
-  border: 20px green groove;
-}
-
-/* ****************************** */
 /* *** grid template area         */
 /* ****************************** */
-#gridTempA { /* grid template A */
-  width: 90%;   /* taggen skall uppta 90% av skärmbredd */
-  margin: auto; /* auto => taggen centreras på skärmen */
-  border: 1px red solid; /* fär att visa taggens utbredning */
+.page { /* grid template A */
+  width: 90%;             /* taggen skall uppta 90% av skärmbredd */
+  margin: auto;           /* auto => taggen centreras på skärmen */
+  border: 1px gold solid; /* för att visa taggens utbredning */
   height: 600px;
-  display: grid; /* rutnäts direktivet */
+  display: grid;          /* rutnäts direktiv */
 }
 
 /* Media query - css motsvarighet till if-sats */
@@ -82,37 +65,48 @@ section, footer {
 /* det närmaste vi kommer programmering i css */
 /* om skärmen har minst 700 px bredd så gäller detta */
 @media (min-width: 700px) {
-  #gridTempA {
+  .page {
     grid-template-areas:
-      "logo top top"
-      "left main main"
-      "left main main"
-      "left main main";
+      "logo   top   top    top"
+      "left   main   main   main"
+      "left   main   main   main"
+      "left   main   main   main"
+      "footer footer footer footer";
+  }
+  .drop {
+    display: none;
+  }
+  .footer {
+	background-color:yellow;	
   }
 }
 
 /* om skärmen har högst 700 px bredd så gäller detta */
 @media (max-width: 700px) {
-  #gridTempA {
+  .page {
     grid-template-areas:
-      "logo top"
-      "main main"
-      "main main"
-      "main main";
+      "drop   top"
+      "main   main"
+      "main   main"
+      "main   main"
+      "footer footer";
   }
-
-  .left {
+  .logo, .left {
     display: none;
   }
 }
 
-#gridTempA span {
+.page span {
   border: 1px blue dashed;
 }
 
 .logo {
   grid-area: logo;
   background-color: red;
+}
+.drop {
+  grid-area: drop;
+  background-color: gold;
 }
 
 .top {
@@ -124,7 +118,10 @@ section, footer {
   grid-area: left;
   background-color: violet;
 }
-
+.footer {
+  grid-area:footer;
+  background-color: orange;
+}
 .main {
   grid-area: main;
   background-color: DodgerBlue;
