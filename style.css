@@ -58,6 +58,8 @@ section, footer {
   border: 1px gold solid; /* för att visa taggens utbredning */
   height: 600px;
   display: grid;          /* rutnäts direktiv */
+  align-items: auto;      /* default */
+  justify-items: auto; /* left;  auto; */
 }
 
 /* Media query - css motsvarighet till if-sats */
@@ -72,6 +74,8 @@ section, footer {
       "left   main   main   main"
       "left   main   main   main"
       "footer footer footer footer";
+    
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .drop {
     display: none;
@@ -85,11 +89,12 @@ section, footer {
 @media (max-width: 700px) {
   .page {
     grid-template-areas:
-      "drop   top"
-      "main   main"
-      "main   main"
-      "main   main"
-      "footer footer";
+      "drop   top    top"
+      "main   main   main"
+      "main   main   main"
+      "main   main   main"
+      "footer footer footer";
+      grid-template-columns: 1fr 1fr 1fr;
   }
   .logo, .left {
     display: none;
@@ -124,7 +129,7 @@ section, footer {
 }
 .main {
   grid-area: main;
-  background-color: DodgerBlue;
+  background-color: lightblue;
 }
 
 /* ************************************** */
@@ -132,78 +137,44 @@ section, footer {
 /* ************************************** */
 
 /* *********************************** */
-/* klistrat och kopierat från w3school */
+/* Dropdown meny                       */
 /* *********************************** */
-
-/* Dropdown Button */
-.dropbtn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
+.dropMenu {
   position: relative;
   display: inline-block;
+  padding: 0px;
+  top: 4px;
+  left: 0;
+  border: 2px red dashed; /* not inherited */
 }
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
+.dropMenu button {
+  background-color: gray;
+  padding: 0px;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+  display: inline-block;
+  border: 2px green dotted;
+}
+.dropCnt {
   display: none;
   position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  background-color: white;
   z-index: 1;
+  width:100%;
 }
-
-/* Links inside the dropdown */
-.dropdown-content a {
+.dropCnt a {
   color: black;
-  padding: 12px 16px;
+  padding: 6px 0px;
   text-decoration: none;
-  display: block;
+  display: inline-block;
+  width:100%;
 }
+.dropCnt a:hover {background-color: #ddd;}
 
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+/* mer specifik kontroll */
+#dropMenu1:hover #dropCnt1 {display: block;}
+#dropMenu1:hover #dropButton1 {background-color: green;}
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+/* slut drop down meny css */
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-/* *********************** */
-/* slutkopia från w3school */
-/* *********************** */
-
-
-.col1n2 {
-  grid-column: 1 / span 2;
-  grid-row: 3 / span 2;
-}
-
-.row1n2 {
-  grid-column: 3 / span 1;
-  grid-row: 1 / span 2;
-}
-
-.red {
-  background-color: red;
-}
-
-.green {
-  background-color: #90ff30;
-}
-
-.violet {
-  background-color: violet;
-}
-
-.yellow {
-  background-color: yellow;
-}
