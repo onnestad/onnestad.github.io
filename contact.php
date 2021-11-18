@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="style.css" rel="stylesheet">
+	<link href="cssSvgImages.css" rel="stylesheet">
+	<title>! Flexbox Grid sida </title>
+</head>
+
+<body>
+	<header>
+		<h1 class="gridHead">Onnestad IT-teknik - Contact</h1>
+	</header>
+
+	<?php include "menu.php"; ?>
+
+	<section>
+		<h1 class="gridHead">Grid Template Areas Content</h1>
+		<div class="page">
+			<span class="logo"> logo </span>
+            <span class="drop">
+                <div>drop</div>
+                <div>drop</div>
+                <div id="dropMenu1" class="dropMenu">
+                    <button id="dropButton1">Dropdown</button>
+                    <span id="dropCnt1" class="dropCnt">
+                        <a href="#">Link A</a>
+                        <a href="#">Link B</a>
+                        <a href="#">Link C</a>
+                    </span>
+                </div>
+                <div>drop</div>
+                <div>drop</div>
+                <div>drop</div>
+
+            </span>
+			<span class="top">
+                <div>top </div>
+                <div id="dropMenu1" class="dropMenu">
+                    <button id="dropButton1">Dropdown</button>
+                    <span id="dropCnt1" class="dropCnt">
+                        <a href="#">Link A</a>
+                        <a href="#">Link B</a>
+                        <a href="#">Link C</a>
+                    </span>
+                </div>
+                <div>top </div>
+                <div>top </div>
+            </span>
+			<span class="left"> left </span>
+			<span class="main"> main </span>
+			<footer class="footer"> footer </footer>
+		</div>
+	</section>
+
+	<footer>
+		<h1 class="gridHead"> The Circuit </h1>
+		<nav class="friendLink">
+			<span><a href="https://aentity66.github.io"> Aentity66 </a> </span>
+			<span><a href="https://tobiaswijk.github.io/"> Tobias </a> </span>
+			<span><a href="https://onnell.github.io"> Lanelle </a> </span>
+			<span><a href="https://mattejo.github.io"> Jonas </a> </span>
+			<span><a href="https://peghmo.github.io"> Alexander </a> </span>
+			<span><a href="https://onnestad.github.io"> Onnestad IT </a> </span>
+		</nav>
+	</footer>
+
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-0T2CGJJ1WQ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'G-0T2CGJJ1WQ');
+	</script>
+
+</body>
+
+</html>

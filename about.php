@@ -11,26 +11,19 @@
 
 <body>
 	<header>
-		<h1 class="gridHead">Onnestad IT-teknik</h1>
+		<h1 class="gridHead">Onnestad IT-teknik - About</h1>
 	</header>
-	<section>
-		<h1 class="gridHead">Flex box</h1>
-		<nav class="topMenu">
-			<span> <a href=""> Hem </a> </span>
-			<span> <a href=""> Om </a> </span>
-			<span> <a href=""> Länkar </a> </span>
-			<span> <a href=""> Kontakt </a> </span>
-		</nav>
-	</section>
+
+  <?php include "menu.php"; ?>
 
 	<section>
 		<h1 class="gridHead">Grid Template Areas Content</h1>
 		<div class="page">
 			<span class="logo"> logo </span>
-            <span class="drop"> 
+            <span class="drop">
                 <div>drop</div>
                 <div>drop</div>
-                <div id="dropMenu1" class="dropMenu"> 
+                <div id="dropMenu1" class="dropMenu">
                     <button id="dropButton1">Dropdown</button>
                     <span id="dropCnt1" class="dropCnt">
                         <a href="#">Link A</a>
@@ -43,9 +36,9 @@
                 <div>drop</div>
 
             </span>
-			<span class="top"> 
+			<span class="top">
                 <div>top </div>
-                <div id="dropMenu1" class="dropMenu"> 
+                <div id="dropMenu1" class="dropMenu">
                     <button id="dropButton1">Dropdown</button>
                     <span id="dropCnt1" class="dropCnt">
                         <a href="#">Link A</a>
