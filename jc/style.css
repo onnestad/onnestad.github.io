@@ -5,12 +5,10 @@ body {
   /*, 'Times', serif;*/
   font: 12px Times normal;
 }
-
 section, footer {
   padding: 10px;
   border: 1px yellow dashed;
 }
-
 /* ****************************** */
 /* *** flex box
 /* ****************************** */
@@ -19,8 +17,9 @@ section, footer {
   min-height: 30px;
   padding:2px;
   margin: auto;
+  margin-top:4px;
   display: flex;
-  background-color: DodgerBlue;
+  background-color: navy;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -74,7 +73,7 @@ section, footer {
       "left   main   main   main"
       "left   main   main   main"
       "footer footer footer footer";
-    
+
       grid-template-columns: 1fr 1fr 1fr 1fr;
   }
   .drop {
@@ -100,11 +99,9 @@ section, footer {
     display: none;
   }
 }
-
 .page span {
-  border: 1px blue dashed;
+  border: none;
 }
-
 .logo {
   grid-area: logo;
   background-color: red;
@@ -113,12 +110,10 @@ section, footer {
   grid-area: drop;
   background-color: gold;
 }
-
 .top {
   grid-area: top;
   background-color: violet;
 }
-
 .left {
   grid-area: left;
   background-color: violet;
@@ -171,10 +166,8 @@ section, footer {
   width:100%;
 }
 .dropCnt a:hover {background-color: #ddd;}
-
-/* mer specifik kontroll */
-#dropMenu1:hover #dropCnt1 {display: block;}
-#dropMenu1:hover #dropButton1 {background-color: green;}
-
+.dropMenu:hover .dropCnt {display: block;}
+.dropMenu:hover > button  {
+  background-color: green;
+}
 /* slut drop down meny css */
-
