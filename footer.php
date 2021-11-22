@@ -16,9 +16,11 @@
   // https://www.w3schools.com/js/js_htmldom_elements.asp
   /* ****************************************** */
   var loc = '' + document.location;
-  loc = loc.substring( loc.lastIndexOf('/')+1, loc.lastIndexOf('.') );
+  var pos0 = loc.lastIndexOf('/')+1;
+  var pos1 = loc.lastIndexOf('.');
+  loc = pos1 > pos0 ?  loc.substring( pos0, pos1 ) : 'index';
   var os = document.getElementsByClassName( 's_' + loc );
-  for ( var i in os ) {
+  for ( var i = 0; i < os.length; i++ ) {
       var o = os[i];
       o.classList.add('active');
    }

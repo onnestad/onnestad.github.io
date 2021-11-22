@@ -104,7 +104,7 @@ section, footer {
 }
 .logo {
   grid-area: logo;
-  background-color: red;
+  background-color: darkred;
 }
 .drop {
   grid-area: drop;
@@ -175,6 +175,6 @@ section, footer {
 /* *********************** */
 /* menu.php style          */
 /* *********************** */
-.topMenu span.active, .dropMenu span.active {
-  background-color: yellow;
+.topMenu span.active, .dropMenu span.active a {
+  background-color: gold;
 }

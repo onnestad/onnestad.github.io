@@ -15,6 +15,7 @@
     <div class="page">
     <span class="logo">
       <span class="big icon-apacheflink"> </span>
+      <h3>Vektorgrafik (svg) i en font</h3>
     </span>
     <span class="drop">
       <span class="big icon-apacheflink"> </span>
