@@ -171,3 +171,10 @@ section, footer {
   background-color: green;
 }
 /* slut drop down meny css */
+
+/* *********************** */
+/* menu.php style          */
+/* *********************** */
+.topMenu span.active, .dropMenu span.active {
+  background-color: yellow;
+}
