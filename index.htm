@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <style>
+      .page {
+        display: grid;
+        grid-template-areas:
+          "head"
+          "main"
+          "foot";
+        grid-template-columns: 1fr;
+        padding:0px;
+        margin:10px;
+        border: 2px green dashed;
+      }
+      .head { grid-area: head; }
+      .left { grid-area: left; }
+      .main { grid-area: main; }
+      .rght { grid-area: rght; }
+      .foot { grid-area: foot; }
+
+      .head, .left, .main, .rght, .foot, .head { 
+        border: 1px red dashed; 
+      }
+      .wMenu {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        list-style-type: none;
+        border: 1px yellow solid;
+        margin:2px;
+      }
+      .wMenu span {
+        margin:2px;
+        border: 1px blue dashed;
+        width: 18%;
+        color: white;
+        background-color: navy;
+      }
+      .head {
+        border: 1px silver dashed;
+      }
+      /* ************************** */
+      /* Dropdown menu              */
+      /* ************************** */
+      .dMenu {
+         position: relative; /* relativt där den borde vara i flödet */
+         display: inline-block;
+         padding:0;
+         top:0;
+         left:0;
+      }
+      .dHead {
+        display: inline-block;
+        background-color: gray;
+        padding:0;
+        color: white;
+        font-size: 16px;
+        width: 100%;
+      }
+      .dCont {
+        display: none;
+        position: absolute;
+        background-color: white;
+        z-index: 1; /* lägg ovanpå */
+        width: 100%;
+      }
+      .dCont a:hover {background-color: #ddd;}
+      .dMenu:hover .dCont {display: block;}
+      .dMenu:hover .dHead  { background-color: green; }
+      /* ************************** */
+      /*  slut drop down meny ***** */
+      /* ************************** */
+
+      /* ************************** */
+      /*  Tända och släcka fält med media query  */
+      /* ************************** */
+      @media (min-width:400px) { /* stor skärm */
+        .wMenu { display:flex; }
+        .dMenu { display:none; }
+        .page {
+          grid-template-areas:
+            "head head head"
+            "left main rght"
+            "foot foot foot";
+          grid-template-columns: 1fr 1fr 1fr;
+        }
+      }
+      @media (max-width:400px) { /*liten skärm */
+        .left, .rght, .wide { display:none; }
+        .dMenu { display:inline-block; }
+        .wMenu { display:none; }
+        .page {
+          grid-template-areas:
+            "head"
+            "main"
+            "foot";
+        }
+      }
+
+    </style>
+  </head>
+
+  <body class="page">
+    <header class="head"> 
+      <nav>
+        <div class="wMenu">
+          <span>Topp meny</span>
+          <span>Hem</span>
+          <span>Om</span>
+          <span>Länkar</span>
+          <span>Kontakt</span>
+        </div>
+
+        <div id="dMenu1" class="dMenu">
+          <div class="dHead">Dropdown</div> 
+          <span class="dCont">
+            <div class="dms_index">   <a href="index.php">   Home    </a>  </div>
+            <div class="dms_about">   <a href="about.php">   Om      </a>  </div>
+            <div class="dms_links">   <a href="links.php">   Länkar  </a>  </div>
+            <div class="dms_contact"> <a href="contact.php"> Kontakt </a>  </div>
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <div class="left"> left </div>
+    <div class="main"> main </div>
+    <div class="rght"> rght  </div>
+    <footer class="foot"> foot </footer>
+  </body>
+
+</html>
