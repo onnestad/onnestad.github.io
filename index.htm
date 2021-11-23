@@ -5,13 +5,8 @@
     <style>
       .page {
         display: grid;
-        grid-template-areas:
-          "head"
-          "main"
-          "foot";
-        grid-template-columns: 1fr;
-        padding:0px;
-        margin:10px;
+        padding: 0;
+        margin: 10px;
         border: 2px green dashed;
       }
       .head { grid-area: head; }
@@ -29,10 +24,10 @@
         text-decoration: none;
         list-style-type: none;
         border: 1px yellow solid;
-        margin:2px;
+        margin: 2px;
       }
       .wMenu span {
-        margin:2px;
+        margin: 2px;
         border: 1px blue dashed;
         width: 18%;
         color: white;
@@ -47,14 +42,14 @@
       .dMenu {
          position: relative; /* relativt där den borde vara i flödet */
          display: inline-block;
-         padding:0;
-         top:0;
-         left:0;
+         padding: 0;
+         top: 0;
+         left: 0;
       }
       .dHead {
         display: inline-block;
         background-color: gray;
-        padding:0;
+        padding: 0;
         color: white;
         font-size: 16px;
         width: 100%;
@@ -77,8 +72,8 @@
       /*  Tända och släcka fält med media query  */
       /* ************************** */
       @media (min-width:400px) { /* stor skärm */
-        .wMenu { display:flex; }
-        .dMenu { display:none; }
+        .wMenu { display: flex; }
+        .dMenu { display: none; }
         .page {
           grid-template-areas:
             "head head head"
@@ -88,15 +83,15 @@
         }
       }
       @media (max-width:400px) { /*liten skärm */
-        .left, .rght, .wide { display:none; }
-        .dMenu { display:inline-block; }
-        .wMenu { display:none; }
+        .left, .rght, .wide { display: none; }
+        .dMenu { display: inline-block; }
+        .wMenu { display: none; }
         .page {
-          grid-template-areas:
-            "head"
-            "main"
-            "foot";
-        }
+        grid-template-areas:
+          "head"
+          "main"
+          "foot";
+        grid-template-columns: 1fr;
       }
 
     </style>
